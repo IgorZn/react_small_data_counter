@@ -17,7 +17,7 @@ function Message(props) {
 
         if (count < 0) {
             newDate = currentDate.setDate(newDate.getDate() + count)
-            return <p>{count} days ago was {new Date(newDate).toDateString()}</p>
+            return <p>{Math.abs(count)} days ago was {new Date(newDate).toDateString()}</p>
         }
     }
 
