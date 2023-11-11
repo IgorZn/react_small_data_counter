@@ -40,7 +40,7 @@ function App() {
 
 
     return (
-        <div className="container ">
+        <div className="container text-center justify-content-center">
             <h1>Date counter</h1>
             <div className={"row justify-content-center"}>
                 <div className="col mystyle">
@@ -57,7 +57,7 @@ function App() {
                 </div>
             </div>
             <div className={"row justify-content-center"}>
-                <div className={"col justify-content-center text-center"}>
+                <div className={"col justify-content-center"}>
                     <Message count={count} step={step}/>
                 </div>
             </div>
