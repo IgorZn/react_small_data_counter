@@ -8,15 +8,11 @@ function App() {
     const [step, setStep] = useState(1);
 
     const useStepIncrement = useCallback(
-        () => {
-            setStep((current) => current + 1)
-        },
+        () => { setStep((current) => current + 1)},
         [],
     );
     const useStepDecrement = useCallback(
-        () => {
-            setStep((current) => current === 1 ? current : current - 1)
-        },
+        () => { setStep((current) => current === 1 ? current : current - 1)},
         [],
     );
 

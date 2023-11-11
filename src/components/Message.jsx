@@ -1,17 +1,14 @@
 import React from 'react';
 
 function Message(props) {
-
+    const {count, step} = props
 
     let currentDate = new Date()
     let newDate = undefined || currentDate
-    const {count, step} = props
     const message = (count) => {
         if (count >= 1) {
-            return <p>{count} days from today {
-                new Date(currentDate.setDate(currentDate.getDate() + count))
-                    .toDateString()
-            }</p>
+            newDate = currentDate.setDate(newDate.getDate() + count)
+            return <p>{count} days from today {new Date(newDate).toDateString()}</p>
         }
 
         if (count === 0) {
@@ -20,10 +17,8 @@ function Message(props) {
 
         if (count < 0) {
             newDate = currentDate.setDate(newDate.getDate() + count)
-
             return <p>{count} days ago was {new Date(newDate).toDateString()}</p>
         }
-
     }
 
 
